@@ -1,0 +1,5 @@
+1.multilanguage invoice extractor App demo
+2. create environment
+3. requiremtns.txt
+4. step by step building App
+5. addtional improvements
