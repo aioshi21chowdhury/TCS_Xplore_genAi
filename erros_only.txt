@@ -1,0 +1,13 @@
+Here is the summary of the errors you encountered and the one-liner reason for each:
+
+* ModuleNotFoundError: No module named 'langchain.text_splitter'
+* Reason: LangChain shifted text splitters out of its core monolithic package into a separate, dedicated library called langchain-text-splitters.
+* ModuleNotFoundError: No module named 'langchain.chains'
+* Reason: Modern LangChain completely removed legacy chains from the primary library package to favor explicit LCEL pipelines.
+* 404 NOT_FOUND: models/gemini-2.0-flash-001 / models/gemini-1.5-flash is not found or not supported for embedContent
+* Reason: An outdated or empty embedding model name forced the updated LangChain package to fall back to its internal text generation model defaults, which cannot process vector embeddings.
+* 404 NOT_FOUND: models/text-embedding-004 is not found for API version v1beta
+* Reason: Prepending models/ to the string targeting Google's updated consolidated SDK caused an invalid API endpoint mismatch.
+
+Would you like me to help you test the script's execution from your terminal to verify that all of these fixed issues are completely gone?
+
